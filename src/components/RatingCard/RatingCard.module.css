@@ -1,5 +1,6 @@
 .card {
-  padding: 24px 24px 31px;
+  max-width: 327px;
+  padding: 24px 23px 31px 24px;
   background-image: linear-gradient(0deg, rgba(23, 30, 40, 1) 0%, rgb(30, 39, 48) 100%);
   border-radius: 16px;
 }
@@ -42,7 +43,8 @@
 }
 .card__ratingContainer {
   display: flex;
-  column-gap: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-bottom: 24px;
 }
 .card__rating {
@@ -101,4 +103,55 @@
   color: var(--clr-orange);
   background-color: var(--clr-dark-blue);
   border-radius: 30px;
+}
+
+@media (min-width: 576px) {
+  .card {
+    max-width: 412px;
+    margin-top: 6px;
+    padding: 32px 39px 31px 32px;
+    border-radius: 30px;
+  }
+  .card_alignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 42px 47px 34px;
+  }
+  .card__iconContainer {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 34px;
+  }
+  .card__title {
+    margin-bottom: 11px;
+    font-size: 1.73rem;
+  }
+  .card__text:not(:last-child) {
+    margin-bottom: 27px;
+  }
+  .card__ratingContainer {
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+  .card__rating {
+    width: 51px;
+    height: 51px;
+    padding: 18px;
+    font-size: 1rem;
+  }
+  .card__illustration {
+    width: 162px;
+    height: 108px;
+    margin-bottom: 32px;
+  }
+  .card__textSelected {
+    width: 192px;
+    margin-left: 7px;
+    margin-bottom: 36px;
+    padding: 9px 8px;
+  }
+  .card__title_marginLeft {
+    margin-left: 8px;
+  }
 }

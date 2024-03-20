@@ -41,7 +41,7 @@ function RatingCard() {
       <div className={style.card__textSelected}>
         <p>You selected {rating} out of 5</p>
       </div>
-      <h2 className={style.card__title}>Thank you!</h2>
+      <h2 className={`${style.card__title} ${style.card__title_marginLeft}`}>Thank you!</h2>
       <p className={style.card__text}>
         We appreciate you taking the time to give a rating. If you ever need more support, 
         don't hesitate to get in touch!
@@ -54,7 +54,8 @@ function RatingCard() {
   }
 
   function handleClickSubmit() {
-    setSubmit(true);
+    if (rating === 0) alert('Please, select a number');
+    else setSubmit(true);
   }
 
   return (
