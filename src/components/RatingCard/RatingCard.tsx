@@ -15,7 +15,7 @@ function RatingCard() {
         Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!
       </p>
-      <div className={style.card__ratingContainer} aria-label='Rate from 1 to 5'>
+      <div className={style.card__ratingContainer}>
         {
           [...Array(5)].map((_, index) => {
             index += 1;
