@@ -3,7 +3,9 @@ import RatingCard from './components/RatingCard/RatingCard.tsx';
 
 function App() {
   return (
-    <RatingCard />
+    <main>
+      <RatingCard />
+    </main>
   );
 }
 
